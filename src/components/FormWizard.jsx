@@ -75,7 +75,7 @@ export default function FormWizard({ history, setState }) {
 		<>
 			<Container maxWidth='md'>
 				<Typography variant='h4' style={{ marginTop: '40px' }}>
-					Form generator
+					Document generator
 				</Typography>
 				<Formik
 					initialValues={{ isBritish: false, numChildren: 0, agreeWithParty: 'I agree with the other party that ', disagreeWithParty: 'I do not agree with the other party that ' }}
