@@ -1,13 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logoWrapper img {
+	height: 70px;
+}
+
+.homePhoto {
+	width: 100%;
+	position: relative;
+}
+
+.welcomeBlock {
+	position: absolute;
+	width: 40%;
+	top: 130px;
+	background-color: white;
+	padding: 2rem;
+	left: 0;
+}
+
+.welcomeBlock :after {
+	content: '';
+	background-color: #8aa9fd;
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+@media only screen and (max-width: 811px) {
+	.welcomeBlock {
+		top: 100px;
+	}
+}
+
+@media only screen and (max-width: 686px) {
+	.welcomeBlock {
+		padding: 0.7rem;
+		top: 90px;
+	}
+	.supportedText {
+		display: none;
+	}
+	.home h4 {
+		font-size: 130%;
+	}
+}
+
+.footerWrapper {
+	background-color: rgb(242, 241, 241);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+	.MuiTypography-displayBlock {
+		text-align: center;
+	}
+	.hideMobile {
+		display: none;
+	}
+}
+
+/* workaround of position moving */
+.MuiButton-outlined::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 1px solid rgba(0, 0, 0, 0.23);
+	border-radius: 3px;
+}
+
+.MuiButtonGroup-groupedHorizontal:not(:last-child)::after {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.MuiButtonGroup-groupedHorizontal:not(:first-child)::after {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.MuiButtonGroup-groupedOutlinedHorizontal:not(:last-child) {
+	margin-left: -1px;
 }
